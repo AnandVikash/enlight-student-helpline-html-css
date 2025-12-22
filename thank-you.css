@@ -1,0 +1,218 @@
+:root {
+  --dark: #111;
+  --gray: #666;
+  --bubble: #19c200;
+  --line: #e5e5e5;
+  --transition: .3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  padding: 18px 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+.contact-number {
+  color: var(--dark);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+main.thankyou-wrapper {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Card */
+.thankyou-box {
+  background: #fff;
+  width: 100%;
+  max-width: 460px;
+  padding: 42px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+  animation: fadeUp .35s ease;
+}
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(32px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.thankyou-box img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.thankyou-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--bubble);
+  margin-bottom: 12px;
+}
+
+.thankyou-box p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: var(--dark);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--bubble);
+}
+
+
+.whatsapp-link {
+  display: inline-block;
+  color: var(--bubble);
+  font-weight: 600;
+  margin-top: 16px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  opacity: 0.7;
+}
+
+
+.site-footer {
+  text-align: center;
+  padding: 40px 0 60px;
+  background: #fff;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-phone {
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-copy {
+  color: #444;
+  font-size: 15px;
+}
+
+
+.whatsapp-btn {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: .3s;
+}
+
+.whatsapp-btn img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.09);
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 480px) {
+
+  main.thankyou-wrapper {
+    padding: 40px 16px;
+  }
+
+  .thankyou-box {
+    padding: 28px 20px;
+  }
+
+  .thankyou-box img {
+    width: 75px;
+  }
+
+  .thankyou-box h2 {
+    font-size: 22px;
+  }
+
+  .thankyou-box p {
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+
+  .whatsapp-link {
+    font-size: 13px;
+  }
+
+  .contact-number {
+    font-size: 17px;
+  }
+}
