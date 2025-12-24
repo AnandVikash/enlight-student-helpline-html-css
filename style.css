@@ -840,45 +840,47 @@
 }
 
 /* SECTION WRAPPER */
-.scholarship-section {
+.stats-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 70px 5%;
   background: #d6ecea;
-  text-align: center;
-  padding: 70px 0;
 }
 
-.scholarship-section h2 {
-  font-size: 36px;
+/* SECTIONS */
+.scholarship-section,
+.placement-section {
+  flex: 1;
+  text-align: center;
+}
+
+/* HEADINGS */
+.scholarship-section h2,
+.placement-section h2 {
+  font-size: 32px;
   font-weight: 700;
   color: var(--dark);
-  line-height: 1.3;
   margin-bottom: 35px;
+  line-height: 1.3;
 }
 
-/* MAIN TABLE CONTAINER */
+/* TABLE */
 .table-box {
-  width: 90%;
-  max-width: 850px;
-  margin: auto;
+  width: 100%;
 }
 
-/* HEADINGS ROW */
 .table-head {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-weight: 600;
-  font-size: 16px;
-  color: var(--dark);
   border-bottom: 2px solid #dcdcdc;
   padding-bottom: 12px;
-  text-align: center;
 }
 
-/* SCROLL VIEW */
+/* SCROLL */
 .scroll-box {
   height: 290px;
   overflow: hidden;
-  margin-top: 6px;
-  position: relative;
 }
 
 .scroll-content {
@@ -887,27 +889,21 @@
   animation: scrollUp 10s linear infinite;
 }
 
-/* ANIMATION */
 @keyframes scrollUp {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-50%);
-  }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
 }
 
+/* ROW */
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  text-align: center;
   padding: 14px 0;
   border-bottom: 1px solid #f2f2f2;
 }
 
-/* SCHOOL LOGO */
+/* LOGOS */
 .school {
   width: 80px;
   height: 32px;
@@ -915,84 +911,56 @@
   margin: auto;
 }
 
-/* STUDENT CELL */
+/* STUDENT */
 .student {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 14px;
 }
 
-/* STUDENT AVATAR */
 .avatar {
-  width: 58px;
-  height: 58px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   background: #eaeaea;
-  border: 2px solid #f3f3f3;
 }
 
-/* STUDENT NAME */
 .student span {
   font-size: 16px;
   font-weight: 500;
-  color: var(--dark);
-  display: inline-block;
 }
 
-/* SCHOLARSHIP AMOUNT */
+/* AMOUNT */
 .amount {
   font-size: 18px;
   font-weight: 700;
   color: #1ca05a;
-  text-align: center;
 }
 
 /* BUTTON */
 .callback-btn {
-  margin-top: 32px;
+  margin-top: 30px;
   padding: 14px 38px;
   background: var(--gold);
-
   color: #fff;
   border-radius: 40px;
   border: none;
   font-size: 17px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-/* MOBILE VIEW */
-@media (max-width: 650px) {
-  .scholarship-section h2 {
+/* MOBILE */
+@media (max-width: 900px) {
+  .stats-wrapper {
+    flex-direction: column;
+  }
+
+  .scholarship-section h2,
+  .placement-section h2 {
     font-size: 24px;
   }
-
-  .table-head,
-  .row {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .school {
-    width: 45px;
-    height: 24px;
-  }
-
-  .avatar {
-    width: 42px;
-    height: 42px;
-  }
-
-  .student span {
-    font-size: 14px;
-  }
-
-  .amount {
-    font-size: 15px;
-  }
 }
-
 .experts-section {
   padding: 60px 0;
   text-align: center;
